@@ -1,11 +1,14 @@
-import React from 'react';
+import React, {useReducer} from 'react';
 import {Header} from "antd/es/layout/layout";
 import {Menu, Row} from "antd";
 import {useHistory} from 'react-router-dom'
+import {useSelector} from "react-redux";
 
 const NavBar: React.FC = () => {
     const history = useHistory();
     const auth = true;
+    const auth1 = useSelector(state => state);
+    console.log(auth1)
     return (
         <Header>
             <Row justify='end'>
